@@ -1,0 +1,909 @@
+{
+  "schemaVersion": "1.0",
+  "extension": {
+    "type": "skill",
+    "name": "gitload",
+    "version": "1.2.0",
+    "scope": "Download files, folders or whole repos from GitHub URLs.",
+    "digest": "sha256:17b61881164e95d3655c90b161bcad8d25c7dda2930e12ff2194c6c84a44188f"
+  },
+  "eval": {
+    "suite": ".evals/gitload@1.2.0",
+    "sha": "9f55e19",
+    "date": "2026-10-05",
+    "runsPerRow": 5
+  },
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Download repo files without git metadata",
+      "criteria": 8,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 18520,
+                "usd": 0.047395
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30654,
+                "usd": 0.053997
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28729,
+                "usd": 0.03337
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48184,
+                "usd": 0.043943
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Download nested folder at a release tag",
+      "criteria": 6,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 16.666666666666668,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 18824,
+                "usd": 0.050027
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30744,
+                "usd": 0.054463
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 83.33333333333333,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28729,
+                "usd": 0.033495
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48255,
+                "usd": 0.044163
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Download a single file",
+      "criteria": 4,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 18116,
+                "usd": 0.044815
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30568,
+                "usd": 0.053593
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28467,
+                "usd": 0.031703
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65476,
+                "usd": 0.05082
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Save a whole repository as a zip archive",
+      "criteria": 5,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 18460,
+                "usd": 0.046611
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 42188,
+                "usd": 0.062101
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 80,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28732,
+                "usd": 0.032986
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65454,
+                "usd": 0.050501
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Save a single folder as a zip archive",
+      "criteria": 4,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 39477,
+                "usd": 0.063341
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 42359,
+                "usd": 0.063985
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28844,
+                "usd": 0.033882
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65571,
+                "usd": 0.051167
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Download a folder into a given directory",
+      "criteria": 4,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28870,
+                "usd": 0.058023
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 53939,
+                "usd": 0.069835
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 73415,
+                "usd": 0.050143
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65425,
+                "usd": 0.050483
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Download a file into a given directory",
+      "criteria": 3,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30049,
+                "usd": 0.055381
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 63992,
+                "usd": 0.067967
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 28475,
+                "usd": 0.03159
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65493,
+                "usd": 0.050732
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Download folder contents flat into cwd",
+      "criteria": 4,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 29948,
+                "usd": 0.060581
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 53911,
+                "usd": 0.070154
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 43408,
+                "usd": 0.038716
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65463,
+                "usd": 0.050409
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Private repo folder with gh CLI signed in",
+      "criteria": 6,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 50,
+                "min": 50,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 18253,
+                "usd": 0.045833
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30705,
+                "usd": 0.054453
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 43839,
+                "usd": 0.041589
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48253,
+                "usd": 0.044159
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Private repo folder with token in custom var",
+      "criteria": 6,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 38607,
+                "usd": 0.065282
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30890,
+                "usd": 0.055663
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 45631,
+                "usd": 0.047319
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48345,
+                "usd": 0.04447
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T11",
+      "title": "Report a folder that does not exist",
+      "criteria": 3,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 27887,
+                "usd": 0.051863
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30758,
+                "usd": 0.055546
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "claude-sonnet-5.5",
+          "reasoningEffort": "default",
+          "platform": "macOS 27",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 43181,
+                "usd": 0.037764
+              }
+            },
+            {
+              "configuration": "gitload 1.2.0",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 65325,
+                "usd": 0.050553
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

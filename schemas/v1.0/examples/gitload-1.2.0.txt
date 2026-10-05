@@ -1,0 +1,116 @@
+┌──────────────────────────────────────────────────────────────────────────┐
+│ EXTENSION PERFORMANCE FACTS                                EPF-1 · REV A │
+├──────────────────────────────────────────────────────────────────────────┤
+│ EXTENSION  gitload 1.2.0 · skill                                         │
+│ SCOPE      Download files, folders or whole repos from GitHub URLs.      │
+├──────────────────────────────────────────────────────────────────────────┤
+│ TASKS 11   PROFILES 2   RUNS/ROW 5   EVAL 2026-10-05                     │
+╞══════════════════════════════════════════════════════════════════════════╡
+│ CONFIGURATION          SCORE¹  RANGE     Δ²   DRAG│LIFT       TOK³  USD³ │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T1  DOWNLOAD REPO FILES WITHOUT GIT METADATA                  8 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            19k 0.047 │
+│     gitload 1.2.0        100%  100–100    0       ┼            31k 0.054 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            29k 0.033 │
+│     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T2  DOWNLOAD NESTED FOLDER AT A RELEASE TAG                   6 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  17–100     —       │            19k 0.050 │
+│     gitload 1.2.0        100%  100–100    0       ┼            31k 0.054 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  83–100     —       │            29k 0.033 │
+│     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T3  DOWNLOAD A SINGLE FILE                                    4 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            18k 0.045 │
+│     gitload 1.2.0        100%  100–100    0       ┼            31k 0.054 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            28k 0.032 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.051 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T4  SAVE A WHOLE REPOSITORY AS A ZIP ARCHIVE                  5 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            18k 0.047 │
+│     gitload 1.2.0        100%  100–100    0       ┼            42k 0.062 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  80–100     —       │            29k 0.033 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.051 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T5  SAVE A SINGLE FOLDER AS A ZIP ARCHIVE                     4 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  0–100      —       │            39k 0.063 │
+│     gitload 1.2.0        100%  100–100    0       ┼            42k 0.064 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            29k 0.034 │
+│     gitload 1.2.0        100%  100–100    0       ┼            66k 0.051 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T6  DOWNLOAD A FOLDER INTO A GIVEN DIRECTORY                  4 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            29k 0.058 │
+│     gitload 1.2.0        100%  100–100    0       ┼            54k 0.070 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            73k 0.050 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.050 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T7  DOWNLOAD A FILE INTO A GIVEN DIRECTORY                    3 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            30k 0.055 │
+│     gitload 1.2.0        100%  100–100    0       ┼            64k 0.068 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            28k 0.032 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.051 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T8  DOWNLOAD FOLDER CONTENTS FLAT INTO CWD                    4 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            30k 0.061 │
+│     gitload 1.2.0        100%  100–100    0       ┼            54k 0.070 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            43k 0.039 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.050 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T9  PRIVATE REPO FOLDER WITH GH CLI SIGNED IN                 6 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline              50%  50–100     —       │            18k 0.046 │
+│     gitload 1.2.0        100%  100–100  +50       ┼██████████  31k 0.054 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            44k 0.042 │
+│     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T10 PRIVATE REPO FOLDER WITH TOKEN IN CUSTOM VAR              6 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  100–100    —       │            39k 0.065 │
+│     gitload 1.2.0        100%  100–100    0       ┼            31k 0.056 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            46k 0.047 │
+│     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T11 REPORT A FOLDER THAT DOES NOT EXIST                       3 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
+│     baseline             100%  0–100      —       │            28k 0.052 │
+│     gitload 1.2.0        100%  100–100    0       ┼            31k 0.056 │
+│                                                                          │
+│     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
+│     baseline             100%  100–100    —       │            43k 0.038 │
+│     gitload 1.2.0        100%  100–100    0       ┼            65k 0.051 │
+╞══════════════════════════════════════════════════════════════════════════╡
+│ ¹ SCORE  median criteria passed · RANGE min–max · n=5                    │
+│ ² Δ      median score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp      │
+│ ³ USAGE  input + output + cache · TOK total · USD list @ eval date       │
+│   SCOPE  task + profile specific · no transfer implied                   │
+├──────────────────────────────────────────────────────────────────────────┤
+│ EVAL  .evals/gitload@1.2.0                                   SHA 9f55e19 │
+└──────────────────────────────────────────────────────────────────────────┘

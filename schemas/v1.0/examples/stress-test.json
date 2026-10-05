@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "1.0",
+  "extension": {
+    "type": "mcp-server",
+    "name": "acme-enterprise-pdf-forms-mcp-server-pro",
+    "version": "10.20.300-rc.1+b9999",
+    "scope": "Stress test: every field at its limit and every value extreme",
+    "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "eval": {
+    "suite": "github.com/acme/evals/acme-pdf-mcp-server@10.20.300-rc",
+    "sha": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "date": "2026-12-31",
+    "runsPerRow": 100
+  },
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Fifty character task title to test the max length",
+      "criteria": 1,
+      "profiles": [
+        {
+          "harness": {
+            "name": "VS Code Copilot",
+            "version": "1.105.2"
+          },
+          "model": "claude-opus-4.8",
+          "reasoningEffort": "xhigh",
+          "platform": "Windows 11 ARM64",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "usage": {
+                "tokens": 0,
+                "usd": 0
+              }
+            },
+            {
+              "configuration": "acme-pdf-mcp 10.20.3",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 999499,
+                "usd": 0.0004
+              }
+            },
+            {
+              "configuration": "tiny lift",
+              "baseline": false,
+              "score": {
+                "median": 1,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 999500,
+                "usd": 0.9995
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Total collapse",
+      "criteria": 100,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Claude Code Enterprise Edition",
+            "version": "2.1.0-insiders.20261"
+          },
+          "model": "claude-opus-4.8-fast-mode-preview-202610",
+          "reasoningEffort": "maximum-with-budget",
+          "platform": "Windows 11 Enterprise LTSC 24H2 (ARM64)",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 999,
+                "usd": 0.001
+              }
+            },
+            {
+              "configuration": "acme-pdf-mcp 10.20.3",
+              "baseline": false,
+              "score": {
+                "median": 0,
+                "min": 0,
+                "max": 0
+              },
+              "usage": {
+                "tokens": 9949999,
+                "usd": 99.994
+              }
+            },
+            {
+              "configuration": "half point drag",
+              "baseline": false,
+              "score": {
+                "median": 97.5,
+                "min": 66.6667,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 999499999,
+                "usd": 99999.4
+              }
+            },
+            {
+              "configuration": "huge usage",
+              "baseline": false,
+              "score": {
+                "median": 70,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 12345678901,
+                "usd": 123456
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Bar boundaries",
+      "criteria": 12,
+      "profiles": [
+        {
+          "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "Ubuntu 26.04",
+          "rows": [
+            {
+              "configuration": "baseline",
+              "baseline": true,
+              "score": {
+                "median": 50,
+                "min": 25,
+                "max": 75
+              },
+              "usage": {
+                "tokens": 1000,
+                "usd": 1
+              }
+            },
+            {
+              "configuration": "lift 45 (9 cells)",
+              "baseline": false,
+              "score": {
+                "median": 95,
+                "min": 90,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            },
+            {
+              "configuration": "lift 50 (10, max)",
+              "baseline": false,
+              "score": {
+                "median": 100,
+                "min": 100,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            },
+            {
+              "configuration": "drag 30 (6, max)",
+              "baseline": false,
+              "score": {
+                "median": 20,
+                "min": 0,
+                "max": 40
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            },
+            {
+              "configuration": "drag 35 (clipped)",
+              "baseline": false,
+              "score": {
+                "median": 15,
+                "min": 0,
+                "max": 40
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            },
+            {
+              "configuration": "no change",
+              "baseline": false,
+              "score": {
+                "median": 50,
+                "min": 50,
+                "max": 50
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            },
+            {
+              "configuration": "rounding (50.6%)",
+              "baseline": false,
+              "score": {
+                "median": 50.6,
+                "min": 50.4,
+                "max": 50.6
+              },
+              "usage": {
+                "tokens": 48000,
+                "usd": 1.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

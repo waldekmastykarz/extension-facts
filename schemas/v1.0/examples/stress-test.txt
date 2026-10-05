@@ -1,0 +1,43 @@
+┌──────────────────────────────────────────────────────────────────────────┐
+│ EXTENSION PERFORMANCE FACTS                                EPF-1 · REV A │
+├──────────────────────────────────────────────────────────────────────────┤
+│ EXTENSION  acme-enterprise-pdf-forms-mcp-server-pro 10.20.300-rc.1+b9999 │
+│            · mcp-server                                                  │
+│ SCOPE      Stress test: every field at its limit and every value extreme │
+├──────────────────────────────────────────────────────────────────────────┤
+│ TASKS 3   PROFILES 3   RUNS/ROW 100   EVAL 2026-12-31                    │
+╞══════════════════════════════════════════════════════════════════════════╡
+│ CONFIGURATION          SCORE¹  RANGE     Δ²   DRAG│LIFT       TOK³  USD³ │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T1  FIFTY CHARACTER TASK TITLE TO TEST THE MAX LENGTH        1 CRITERION │
+│     VS Code Copilot 1.105.2 · claude-opus-4.8 · xhigh · Windows 11 ARM64 │
+│     baseline               0%  0–0        —       │              0 0.000 │
+│     acme-pdf-mcp 10.20.3 100%  100–100 +100       ┼█████████► 999k <.001 │
+│     tiny lift              1%  0–100     +1       ┼█          1.0M  1.00 │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T2  TOTAL COLLAPSE                                          100 CRITERIA │
+│     Claude Code Enterprise Edition 2.1.0-insiders.20261                  │
+│     · claude-opus-4.8-fast-mode-preview-202610 · maximum-with-budget     │
+│     · Windows 11 Enterprise LTSC 24H2 (ARM64)                            │
+│     baseline             100%  100–100    —       │            999 0.001 │
+│     acme-pdf-mcp 10.20.3   0%  0–0     -100 ◄░░░░░┼           9.9M 99.99 │
+│     half point drag       98%  67–100    -2      ░┼           999M 99999 │
+│     huge usage            70%  0–100    -30 ░░░░░░┼            12G  123k │
+├──────────────────────────────────────────────────────────────────────────┤
+│ T10 BAR BOUNDARIES                                           12 CRITERIA │
+│     Copilot SDK 1.0.14 · gpt-5.6-terra · default · Ubuntu 26.04          │
+│     baseline              50%  25–75      —       │             1k  1.00 │
+│     lift 45 (9 cells)     95%  90–100   +45       ┼█████████   48k  1.50 │
+│     lift 50 (10, max)    100%  100–100  +50       ┼██████████  48k  1.50 │
+│     drag 30 (6, max)      20%  0–40     -30 ░░░░░░┼            48k  1.50 │
+│     drag 35 (clipped)     15%  0–40     -35 ◄░░░░░┼            48k  1.50 │
+│     no change             50%  50–50      0       ┼            48k  1.50 │
+│     rounding (50.6%)      51%  50–51     +1       ┼█           48k  1.50 │
+╞══════════════════════════════════════════════════════════════════════════╡
+│ ¹ SCORE  median criteria passed · RANGE min–max · n=100                  │
+│ ² Δ      median score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp      │
+│ ³ USAGE  input + output + cache · TOK total · USD list @ eval date       │
+│   SCOPE  task + profile specific · no transfer implied                   │
+├──────────────────────────────────────────────────────────────────────────┤
+│ EVAL  github.com/acme/evals/acme-pdf-mcp-server@10.20.300-rc SHA fffffff │
+└──────────────────────────────────────────────────────────────────────────┘
