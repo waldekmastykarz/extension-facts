@@ -248,16 +248,16 @@
           "type": "boolean"
         },
         "score": {
-          "description": "Percentage of criteria passed per run, aggregated over runsPerRow runs.",
+          "description": "Percentage of criteria passed per run: the mean over runsPerRow runs, and the lowest and highest run.",
           "type": "object",
           "additionalProperties": false,
           "required": [
-            "median",
+            "mean",
             "min",
             "max"
           ],
           "properties": {
-            "median": {
+            "mean": {
               "$ref": "#/$defs/percent"
             },
             "min": {
@@ -269,7 +269,7 @@
           }
         },
         "usage": {
-          "description": "Median per-run usage.",
+          "description": "Mean per-run usage over runsPerRow runs.",
           "type": "object",
           "additionalProperties": false,
           "required": [

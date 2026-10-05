@@ -32,7 +32,7 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 0,
+                "mean": 0,
                 "min": 0,
                 "max": 0
               },
@@ -45,7 +45,7 @@
               "configuration": "acme-pdf-mcp 10.20.3",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
@@ -58,7 +58,7 @@
               "configuration": "tiny lift",
               "baseline": false,
               "score": {
-                "median": 1,
+                "mean": 1,
                 "min": 0,
                 "max": 100
               },
@@ -89,7 +89,7 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
@@ -102,7 +102,7 @@
               "configuration": "acme-pdf-mcp 10.20.3",
               "baseline": false,
               "score": {
-                "median": 0,
+                "mean": 0,
                 "min": 0,
                 "max": 0
               },
@@ -115,7 +115,7 @@
               "configuration": "half point drag",
               "baseline": false,
               "score": {
-                "median": 97.5,
+                "mean": 97.5,
                 "min": 66.6667,
                 "max": 100
               },
@@ -128,7 +128,7 @@
               "configuration": "huge usage",
               "baseline": false,
               "score": {
-                "median": 70,
+                "mean": 70,
                 "min": 0,
                 "max": 100
               },
@@ -159,7 +159,7 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 50,
+                "mean": 50,
                 "min": 25,
                 "max": 75
               },
@@ -172,7 +172,7 @@
               "configuration": "lift 45 (9 cells)",
               "baseline": false,
               "score": {
-                "median": 95,
+                "mean": 95,
                 "min": 90,
                 "max": 100
               },
@@ -185,7 +185,7 @@
               "configuration": "lift 50 (10, max)",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
@@ -198,7 +198,7 @@
               "configuration": "drag 30 (6, max)",
               "baseline": false,
               "score": {
-                "median": 20,
+                "mean": 20,
                 "min": 0,
                 "max": 40
               },
@@ -211,7 +211,7 @@
               "configuration": "drag 35 (clipped)",
               "baseline": false,
               "score": {
-                "median": 15,
+                "mean": 15,
                 "min": 0,
                 "max": 40
               },
@@ -224,7 +224,7 @@
               "configuration": "no change",
               "baseline": false,
               "score": {
-                "median": 50,
+                "mean": 50,
                 "min": 50,
                 "max": 50
               },
@@ -237,7 +237,7 @@
               "configuration": "rounding (50.6%)",
               "baseline": false,
               "score": {
-                "median": 50.6,
+                "mean": 50.6,
                 "min": 50.4,
                 "max": 50.6
               },

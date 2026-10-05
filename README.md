@@ -19,16 +19,16 @@ Each extension version gets a machine-readable facts document. The 76-column tex
 ├──────────────────────────────────────────────────────────────────────────┤
 │ T9  PRIVATE REPO FOLDER WITH GH CLI SIGNED IN                 6 CRITERIA │
 │     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
-│     baseline              50%  50–100     —       │            18k 0.046 │
-│     gitload 1.2.0        100%  100–100  +50       ┼██████████  31k 0.054 │
+│     baseline              60%  50–100     —       │            19k 0.047 │
+│     gitload 1.2.0        100%  100–100  +40       ┼████████    35k 0.056 │
 │                                                                          │
 │     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
-│     baseline             100%  100–100    —       │            44k 0.042 │
+│     baseline             100%  100–100    —       │            50k 0.044 │
 │     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
 ╞══════════════════════════════════════════════════════════════════════════╡
-│ ¹ SCORE  median criteria passed · RANGE min–max · n=5                    │
-│ ² Δ      median score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp      │
-│ ³ USAGE  input + output + cache · TOK total · USD list @ eval date       │
+│ ¹ SCORE  mean criteria passed · RANGE min–max · n=5                      │
+│ ² Δ      mean score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp        │
+│ ³ USAGE  mean per run · input + output + cache · USD list @ eval date    │
 │   SCOPE  task + profile specific · no transfer implied                   │
 ├──────────────────────────────────────────────────────────────────────────┤
 │ EVAL  .evals/gitload@1.2.0                                   SHA 9f55e19 │
@@ -37,7 +37,7 @@ Each extension version gets a machine-readable facts document. The 76-column tex
 
 This is an excerpt. See the [full label](schemas/v1.0/examples/gitload-1.2.0.txt) and the [facts document](schemas/v1.0/examples/gitload-1.2.0.json) it is rendered from.
 
-In this excerpt, the gitload skill doubles GPT-5.6 Terra's score on downloading from a private repo with the GitHub CLI signed in. It also raises the median cost of a run from $0.046 to $0.054. For Claude Sonnet 5.5, the same skill changes nothing except a slightly higher cost. Whether that's worth it is your decision. The label just gives you what you need to make it.
+In this excerpt, the gitload skill raises GPT-5.6 Terra's score on downloading from a private repo with the GitHub CLI signed in from 60% to 100%. It also raises the mean cost of a run from $0.047 to $0.056. For Claude Sonnet 5.5, the same skill changes neither the score nor the cost. Whether that's worth it is your decision. The label just gives you what you need to make it.
 
 ## Why a label
 
@@ -65,9 +65,9 @@ Once other people run your extension, "it seems to work" isn't enough.
 - **Task** (`T1`, `T2`, …): one eval scenario. Each run of the task is graded against a fixed number of pass/fail criteria.
 - **Agent profile**: the setup that ran the task: harness and version, model, reasoning effort, and platform.
 - **Configuration**: what was added to the agent profile. `baseline` is the agent profile on its own. The other rows add the extension under test or a competing extension.
-- **SCORE / RANGE**: the median and the min–max of the percentage of criteria each run passed. A wide range means the agent profile gets the task right only some of the time.
-- **Δ, DRAG, LIFT**: the median score compared with the baseline of the same agent profile, in percentage points. Each bar cell is 5 points. Lift means the extension helped, drag means it hurt. A bar holds up to 10 lift cells or 6 drag cells. A longer bar is cut off, and an arrow (`►` or `◄`) marks the cut end. The Δ number always shows the full value.
-- **TOK / USD**: median usage per run, in tokens and in US dollars at the list price on the eval date. Compare these with the baseline to see what the lift costs.
+- **SCORE / RANGE**: the mean and the min–max of the percentage of criteria each run passed. The mean counts every run, so failures lower the score in proportion to how often and how badly they happen. A wide range means the agent profile gets the task right only some of the time.
+- **Δ, DRAG, LIFT**: the mean score compared with the baseline of the same agent profile, in percentage points. Each bar cell is 5 points. Lift means the extension helped, drag means it hurt. A bar holds up to 10 lift cells or 6 drag cells. A longer bar is cut off, and an arrow (`►` or `◄`) marks the cut end. The Δ number always shows the full value. With few runs, a single run moves the mean a lot, so read small values of Δ together with RUNS/ROW.
+- **TOK / USD**: mean usage per run, in tokens and in US dollars at the list price on the eval date. Over many runs, that's what you pay. Compare these with the baseline to see what the lift costs.
 
 A row only describes that task on that agent profile. Don't assume the same result on other tasks, models, or harnesses.
 

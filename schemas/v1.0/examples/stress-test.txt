@@ -34,9 +34,9 @@
 │     no change             50%  50–50      0       ┼            48k  1.50 │
 │     rounding (50.6%)      51%  50–51     +1       ┼█           48k  1.50 │
 ╞══════════════════════════════════════════════════════════════════════════╡
-│ ¹ SCORE  median criteria passed · RANGE min–max · n=100                  │
-│ ² Δ      median score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp      │
-│ ³ USAGE  input + output + cache · TOK total · USD list @ eval date       │
+│ ¹ SCORE  mean criteria passed · RANGE min–max · n=100                    │
+│ ² Δ      mean score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp        │
+│ ³ USAGE  mean per run · input + output + cache · USD list @ eval date    │
 │   SCOPE  task + profile specific · no transfer implied                   │
 ├──────────────────────────────────────────────────────────────────────────┤
 │ EVAL  github.com/acme/evals/acme-pdf-mcp-server@10.20.300-rc SHA fffffff │

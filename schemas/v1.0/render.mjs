@@ -71,15 +71,15 @@ function render({ extension, eval: evaluation, tasks }) {
       lines.push(...wrap("     ", profileSegments(profile)));
       const baseline = profile.rows.find((item) => item.baseline);
       for (const item of profile.rows) {
-        lines.push(configurationRow(item, item.baseline ? undefined : percent(item.score.median) - percent(baseline.score.median)));
+        lines.push(configurationRow(item, item.baseline ? undefined : percent(item.score.mean) - percent(baseline.score.mean)));
       }
     });
   }
   lines.push(
     rule("╞", "═", "╡"),
-    row(` ¹ SCORE  median criteria passed · RANGE min–max · n=${evaluation.runsPerRow}`),
-    row(` ² Δ      median score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=${PP_PER_CELL} pp`),
-    row(" ³ USAGE  input + output + cache · TOK total · USD list @ eval date"),
+    row(` ¹ SCORE  mean criteria passed · RANGE min–max · n=${evaluation.runsPerRow}`),
+    row(` ² Δ      mean score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=${PP_PER_CELL} pp`),
+    row(" ³ USAGE  mean per run · input + output + cache · USD list @ eval date"),
     row("   SCOPE  task + profile specific · no transfer implied"),
     rule("├", "─", "┤"),
     row(right(put(blank(), ` EVAL  ${evaluation.suite}`, 0), `SHA ${evaluation.sha.slice(0, 7)}`, RIGHT_EDGE)),
@@ -90,7 +90,7 @@ function render({ extension, eval: evaluation, tasks }) {
 
 function configurationRow(item, delta) {
   let line = put(blank(), item.configuration, COL.name);
-  line = right(line, `${percent(item.score.median)}%`, COL.scoreEnd);
+  line = right(line, `${percent(item.score.mean)}%`, COL.scoreEnd);
   line = put(line, `${percent(item.score.min)}–${percent(item.score.max)}`, COL.range);
   if (delta === undefined) {
     line = right(line, "—", COL.deltaEnd);

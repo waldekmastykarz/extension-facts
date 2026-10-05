@@ -32,26 +32,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 18520,
-                "usd": 0.047395
+                "tokens": 22253,
+                "usd": 0.048767
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30654,
-                "usd": 0.053997
+                "tokens": 30662,
+                "usd": 0.054163
               }
             }
           ]
@@ -69,26 +69,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 28729,
-                "usd": 0.03337
+                "tokens": 28715,
+                "usd": 0.047873
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 48184,
-                "usd": 0.043943
+                "tokens": 48182,
+                "usd": 0.059702
               }
             }
           ]
@@ -113,26 +113,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
-                "min": 16.666666666666668,
+                "mean": 83.3333,
+                "min": 16.6667,
                 "max": 100
               },
               "usage": {
-                "tokens": 18824,
-                "usd": 0.050027
+                "tokens": 24825,
+                "usd": 0.052198
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30744,
-                "usd": 0.054463
+                "tokens": 30717,
+                "usd": 0.054329
               }
             }
           ]
@@ -150,26 +150,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
-                "min": 83.33333333333333,
+                "mean": 96.6667,
+                "min": 83.3333,
                 "max": 100
               },
               "usage": {
-                "tokens": 28729,
-                "usd": 0.033495
+                "tokens": 31706,
+                "usd": 0.034772
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 48255,
-                "usd": 0.044163
+                "tokens": 48283,
+                "usd": 0.044368
               }
             }
           ]
@@ -194,26 +194,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 18116,
-                "usd": 0.044815
+                "tokens": 18110,
+                "usd": 0.044749
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30568,
-                "usd": 0.053593
+                "tokens": 32802,
+                "usd": 0.054697
               }
             }
           ]
@@ -231,26 +231,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 28467,
-                "usd": 0.031703
+                "tokens": 28462,
+                "usd": 0.031634
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65476,
-                "usd": 0.05082
+                "tokens": 65478,
+                "usd": 0.050475
               }
             }
           ]
@@ -275,26 +275,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 18460,
-                "usd": 0.046611
+                "tokens": 22229,
+                "usd": 0.047822
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 42188,
-                "usd": 0.062101
+                "tokens": 46599,
+                "usd": 0.063318
               }
             }
           ]
@@ -312,26 +312,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 96,
                 "min": 80,
                 "max": 100
               },
               "usage": {
-                "tokens": 28732,
-                "usd": 0.032986
+                "tokens": 31704,
+                "usd": 0.034465
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65454,
-                "usd": 0.050501
+                "tokens": 65462,
+                "usd": 0.050634
               }
             }
           ]
@@ -356,26 +356,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 80,
                 "min": 0,
                 "max": 100
               },
               "usage": {
-                "tokens": 39477,
-                "usd": 0.063341
+                "tokens": 36525,
+                "usd": 0.063611
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 42359,
-                "usd": 0.063985
+                "tokens": 44728,
+                "usd": 0.064898
               }
             }
           ]
@@ -393,26 +393,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 28844,
-                "usd": 0.033882
+                "tokens": 34761,
+                "usd": 0.03592
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65571,
-                "usd": 0.051167
+                "tokens": 65764,
+                "usd": 0.052343
               }
             }
           ]
@@ -437,26 +437,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 28870,
-                "usd": 0.058023
+                "tokens": 33229,
+                "usd": 0.059091
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 53939,
-                "usd": 0.069835
+                "tokens": 53554,
+                "usd": 0.067466
               }
             }
           ]
@@ -474,26 +474,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 73415,
-                "usd": 0.050143
+                "tokens": 70761,
+                "usd": 0.049841
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65425,
-                "usd": 0.050483
+                "tokens": 65380,
+                "usd": 0.050267
               }
             }
           ]
@@ -518,26 +518,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30049,
-                "usd": 0.055381
+                "tokens": 38436,
+                "usd": 0.064179
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 63992,
-                "usd": 0.067967
+                "tokens": 60312,
+                "usd": 0.067566
               }
             }
           ]
@@ -555,26 +555,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 28475,
-                "usd": 0.03159
+                "tokens": 28468,
+                "usd": 0.031558
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65493,
-                "usd": 0.050732
+                "tokens": 58401,
+                "usd": 0.047156
               }
             }
           ]
@@ -599,26 +599,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 29948,
-                "usd": 0.060581
+                "tokens": 33004,
+                "usd": 0.059607
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 53911,
-                "usd": 0.070154
+                "tokens": 55015,
+                "usd": 0.074263
               }
             }
           ]
@@ -636,26 +636,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 43408,
-                "usd": 0.038716
+                "tokens": 43352,
+                "usd": 0.038423
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65463,
-                "usd": 0.050409
+                "tokens": 65471,
+                "usd": 0.050415
               }
             }
           ]
@@ -680,26 +680,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 50,
+                "mean": 60,
                 "min": 50,
                 "max": 100
               },
               "usage": {
-                "tokens": 18253,
-                "usd": 0.045833
+                "tokens": 18507,
+                "usd": 0.047418
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30705,
-                "usd": 0.054453
+                "tokens": 35073,
+                "usd": 0.055905
               }
             }
           ]
@@ -717,26 +717,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 43839,
-                "usd": 0.041589
+                "tokens": 50093,
+                "usd": 0.043873
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 48253,
-                "usd": 0.044159
+                "tokens": 48259,
+                "usd": 0.044172
               }
             }
           ]
@@ -761,26 +761,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 38607,
-                "usd": 0.065282
+                "tokens": 37421,
+                "usd": 0.066139
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30890,
-                "usd": 0.055663
+                "tokens": 33032,
+                "usd": 0.056054
               }
             }
           ]
@@ -798,26 +798,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 45631,
-                "usd": 0.047319
+                "tokens": 45816,
+                "usd": 0.047195
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 48345,
-                "usd": 0.04447
+                "tokens": 48347,
+                "usd": 0.044486
               }
             }
           ]
@@ -842,26 +842,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 66.6667,
                 "min": 0,
                 "max": 100
               },
               "usage": {
-                "tokens": 27887,
-                "usd": 0.051863
+                "tokens": 30189,
+                "usd": 0.054366
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 30758,
-                "usd": 0.055546
+                "tokens": 35349,
+                "usd": 0.058098
               }
             }
           ]
@@ -879,26 +879,26 @@
               "configuration": "baseline",
               "baseline": true,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 43181,
-                "usd": 0.037764
+                "tokens": 43087,
+                "usd": 0.037316
               }
             },
             {
               "configuration": "gitload 1.2.0",
               "baseline": false,
               "score": {
-                "median": 100,
+                "mean": 100,
                 "min": 100,
                 "max": 100
               },
               "usage": {
-                "tokens": 65325,
-                "usd": 0.050553
+                "tokens": 65320,
+                "usd": 0.050535
               }
             }
           ]
