@@ -21,6 +21,43 @@
       "profiles": [
         {
           "harness": {
+            "name": "Copilot SDK",
+            "version": "1.0.14"
+          },
+          "model": "gpt-5.6-terra",
+          "reasoningEffort": "default",
+          "platform": "Ubuntu 26.04",
+          "rows": [
+            {
+              "configuration": "no extensions",
+              "baseline": false,
+              "score": {
+                "mean": 40,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 12000,
+                "usd": 0.02
+              }
+            },
+            {
+              "configuration": "acme-pdf-mcp 10.20.3",
+              "baseline": false,
+              "score": {
+                "mean": 85,
+                "min": 0,
+                "max": 100
+              },
+              "usage": {
+                "tokens": 30000,
+                "usd": 0.05
+              }
+            }
+          ]
+        },
+        {
+          "harness": {
             "name": "VS Code Copilot",
             "version": "1.105.2"
           },
@@ -29,7 +66,7 @@
           "platform": "Windows 11 ARM64",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 0,
@@ -86,7 +123,7 @@
           "platform": "Windows 11 Enterprise LTSC 24H2 (ARM64)",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "corp default 2026.10",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -156,7 +193,7 @@
           "platform": "Ubuntu 26.04",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 50,

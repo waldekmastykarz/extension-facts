@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Extension Performance Facts v1.0",
-  "description": "Measured performance of one agent extension version on a fixed eval suite, compared with a baseline per task and agent profile.",
+  "description": "Measured performance of one agent extension version on a fixed eval suite, compared with one baseline per task.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -151,11 +151,35 @@
           "minimum": 1
         },
         "profiles": {
+          "description": "Agent profiles that ran the task. Exactly one profile holds the task baseline row.",
           "type": "array",
           "minItems": 1,
           "items": {
             "$ref": "#/$defs/profile"
-          }
+          },
+          "contains": {
+            "type": "object",
+            "required": [
+              "rows"
+            ],
+            "properties": {
+              "rows": {
+                "contains": {
+                  "type": "object",
+                  "required": [
+                    "baseline"
+                  ],
+                  "properties": {
+                    "baseline": {
+                      "const": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
         }
       }
     },
@@ -223,7 +247,7 @@
               }
             }
           },
-          "minContains": 1,
+          "minContains": 0,
           "maxContains": 1
         }
       }
@@ -239,12 +263,13 @@
       ],
       "properties": {
         "configuration": {
-          "description": "`baseline`, the skill under test, or a competing extension, with its version.",
+          "description": "What was added to the agent profile: `no extensions`, the extension under test, or a competing extension, with its version.",
           "type": "string",
           "minLength": 1,
           "maxLength": 20
         },
         "baseline": {
+          "description": "Whether this row is the task baseline: the most common developer setup that every other row in the task is compared with. The label shows `BASE` in its Δ column.",
           "type": "boolean"
         },
         "score": {

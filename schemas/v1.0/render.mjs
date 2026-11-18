@@ -66,19 +66,23 @@ function render({ extension, eval: evaluation, tasks }) {
     lines.push(rule("├", "─", "┤"));
     const criteria = `${task.criteria} ${task.criteria === 1 ? "CRITERION" : "CRITERIA"}`;
     lines.push(row(right(put(blank(), `${task.id.padEnd(4)}${task.title.toUpperCase()}`, 1), criteria, RIGHT_EDGE)));
+    const baselines = task.profiles.flatMap((profile) => profile.rows.filter((item) => item.baseline));
+    if (baselines.length !== 1) {
+      throw new Error(`Task ${task.id} needs exactly one baseline row, found ${baselines.length}.`);
+    }
+    const base = percent(baselines[0].score.mean);
     task.profiles.forEach((profile, index) => {
       if (index > 0) lines.push(row());
       lines.push(...wrap("     ", profileSegments(profile)));
-      const baseline = profile.rows.find((item) => item.baseline);
       for (const item of profile.rows) {
-        lines.push(configurationRow(item, item.baseline ? undefined : percent(item.score.mean) - percent(baseline.score.mean)));
+        lines.push(configurationRow(item, item.baseline ? undefined : percent(item.score.mean) - base));
       }
     });
   }
   lines.push(
     rule("╞", "═", "╡"),
     row(` ¹ SCORE  mean criteria passed · RANGE min–max · n=${evaluation.runsPerRow}`),
-    row(` ² Δ      mean score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=${PP_PER_CELL} pp`),
+    row(` ² Δ      mean score vs BASE · ░ drag ◄ ┼ ► lift █ · cell=${PP_PER_CELL} pp`),
     row(" ³ USAGE  mean per run · input + output + cache · USD list @ eval date"),
     row("   SCOPE  task + profile specific · no transfer implied"),
     rule("├", "─", "┤"),
@@ -93,7 +97,7 @@ function configurationRow(item, delta) {
   line = right(line, `${percent(item.score.mean)}%`, COL.scoreEnd);
   line = put(line, `${percent(item.score.min)}–${percent(item.score.max)}`, COL.range);
   if (delta === undefined) {
-    line = right(line, "—", COL.deltaEnd);
+    line = right(line, "BASE", COL.deltaEnd);
     line = put(line, "│", COL.axis);
   } else {
     line = right(line, delta > 0 ? `+${delta}` : `${delta}`, COL.deltaEnd);

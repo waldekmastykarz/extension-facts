@@ -19,15 +19,15 @@ Each extension version gets a machine-readable facts document. The 76-column tex
 ├──────────────────────────────────────────────────────────────────────────┤
 │ T9  PRIVATE REPO FOLDER WITH GH CLI SIGNED IN                 6 CRITERIA │
 │     Copilot SDK 1.0.14 · gpt-5.6-terra · default · macOS 27              │
-│     baseline              60%  50–100     —       │            19k 0.047 │
+│     no extensions         60%  50–100  BASE       │            19k 0.047 │
 │     gitload 1.2.0        100%  100–100  +40       ┼████████    35k 0.056 │
 │                                                                          │
 │     Copilot SDK 1.0.14 · claude-sonnet-5.5 · default · macOS 27          │
-│     baseline             100%  100–100    —       │            50k 0.044 │
-│     gitload 1.2.0        100%  100–100    0       ┼            48k 0.044 │
+│     no extensions        100%  100–100  +40       ┼████████    50k 0.044 │
+│     gitload 1.2.0        100%  100–100  +40       ┼████████    48k 0.044 │
 ╞══════════════════════════════════════════════════════════════════════════╡
 │ ¹ SCORE  mean criteria passed · RANGE min–max · n=5                      │
-│ ² Δ      mean score vs baseline · ░ drag ◄ ┼ ► lift █ · cell=5 pp        │
+│ ² Δ      mean score vs BASE · ░ drag ◄ ┼ ► lift █ · cell=5 pp            │
 │ ³ USAGE  mean per run · input + output + cache · USD list @ eval date    │
 │   SCOPE  task + profile specific · no transfer implied                   │
 ├──────────────────────────────────────────────────────────────────────────┤
@@ -37,7 +37,7 @@ Each extension version gets a machine-readable facts document. The 76-column tex
 
 This is an excerpt. See the [full label](schemas/v1.0/examples/gitload-1.2.0.txt) and the [facts document](schemas/v1.0/examples/gitload-1.2.0.json) it is rendered from.
 
-In this excerpt, the gitload skill raises GPT-5.6 Terra's score on downloading from a private repo with the GitHub CLI signed in from 60% to 100%. It also raises the mean cost of a run from $0.047 to $0.056. For Claude Sonnet 5.5, the same skill changes neither the score nor the cost. Whether that's worth it is your decision. The label just gives you what you need to make it.
+In this excerpt, the task base is GPT-5.6 Terra with no extensions, the setup most developers start from. When it downloads from a private repo with the GitHub CLI signed in, the gitload skill raises its score from 60% to 100%, and the mean cost of a run from $0.047 to $0.056. Claude Sonnet 5.5 reaches 100% without any extensions, at $0.044 per run, and adding gitload changes neither the score nor the cost. So for this task, switching models gets you the same lift as adding the skill. Whether that's worth it is your decision. The label just gives you what you need to make it.
 
 ## Why a label
 
@@ -64,10 +64,11 @@ Once other people run your extension, "it seems to work" isn't enough.
 - **Extension**: the name, version, and type of the extension under test.
 - **Task** (`T1`, `T2`, …): one eval scenario. Each run of the task is graded against a fixed number of pass/fail criteria.
 - **Agent profile**: the setup that ran the task: harness and version, model, reasoning effort, and platform.
-- **Configuration**: what was added to the agent profile. `baseline` is the agent profile on its own. The other rows add the extension under test or a competing extension.
+- **Configuration**: what was added to the agent profile. `no extensions` is the agent profile on its own. The other rows add the extension under test or a competing extension.
+- **Base**: the one row per task, marked `BASE` in the Δ column, that every other row in the task is compared with. It's the setup most developers use for the task, usually the most common agent profile with no extensions.
 - **SCORE / RANGE**: the mean and the min–max of the percentage of criteria each run passed. The mean counts every run, so failures lower the score in proportion to how often and how badly they happen. A wide range means the agent profile gets the task right only some of the time.
-- **Δ, DRAG, LIFT**: the mean score compared with the baseline of the same agent profile, in percentage points. Each bar cell is 5 points. Lift means the extension helped, drag means it hurt. A bar holds up to 10 lift cells or 6 drag cells. A longer bar is cut off, and an arrow (`►` or `◄`) marks the cut end. The Δ number always shows the full value. With few runs, a single run moves the mean a lot, so read small values of Δ together with RUNS/ROW.
-- **TOK / USD**: mean usage per run, in tokens and in US dollars at the list price on the eval date. Over many runs, that's what you pay. Compare these with the baseline to see what the lift costs.
+- **Δ, DRAG, LIFT**: the mean score compared with the task base, in percentage points. Each bar cell is 5 points. Lift means the row does better than the base, drag means it does worse. Within the base's agent profile, Δ is the effect of the extension alone. On another agent profile, Δ combines the effect of the profile and of the extension, so it also shows which profile handles the task best. To see the extension's own effect on that profile, compare its row with that profile's `no extensions` row. A bar holds up to 10 lift cells or 6 drag cells. A longer bar is cut off, and an arrow (`►` or `◄`) marks the cut end. The Δ number always shows the full value. With few runs, a single run moves the mean a lot, so read small values of Δ together with RUNS/ROW.
+- **TOK / USD**: mean usage per run, in tokens and in US dollars at the list price on the eval date. Over many runs, that's what you pay. Compare these with the base to see what the lift costs.
 
 A row only describes that task on that agent profile. Don't assume the same result on other tasks, models, or harnesses.
 
@@ -112,7 +113,7 @@ A facts document is JSON that validates against `schemas/v<version>/schema.json`
 - **`eval`** identifies the suite and its hash, plus the date, the runs per row, and optional evidence.
 - **`tasks`** holds, for each task, its agent profiles and their configuration rows.
 
-Each agent profile must have exactly one baseline row. The renderer computes Δ and the agent profile count from the data, so they can't drift out of sync with it.
+Each task must have exactly one baseline row (`"baseline": true`), in one of its agent profiles. The renderer computes Δ and the agent profile count from the data, so they can't drift out of sync with it.
 
 Text fields that appear on the label have maximum lengths in the schema. A document that validates always fits in 76 columns.
 

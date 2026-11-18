@@ -29,7 +29,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -66,8 +66,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -110,7 +110,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 83.3333,
@@ -147,8 +147,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 96.6667,
                 "min": 83.3333,
@@ -191,7 +191,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -228,8 +228,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -272,7 +272,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -309,8 +309,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 96,
                 "min": 80,
@@ -353,7 +353,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 80,
@@ -390,8 +390,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -434,7 +434,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -471,8 +471,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -515,7 +515,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -552,8 +552,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -596,7 +596,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -633,8 +633,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -677,7 +677,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 60,
@@ -714,8 +714,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -758,7 +758,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 100,
@@ -795,8 +795,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
@@ -839,7 +839,7 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
+              "configuration": "no extensions",
               "baseline": true,
               "score": {
                 "mean": 66.6667,
@@ -876,8 +876,8 @@
           "platform": "macOS 27",
           "rows": [
             {
-              "configuration": "baseline",
-              "baseline": true,
+              "configuration": "no extensions",
+              "baseline": false,
               "score": {
                 "mean": 100,
                 "min": 100,
